@@ -40,7 +40,6 @@ module.exports = {
             ignoreComments: true,
             code: 180,
         }],
-        "linebreak-style": 0
     },
     globals: {
         __IS_DEV__: true,
