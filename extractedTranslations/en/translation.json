@@ -1,5 +1,13 @@
 {
+  "                Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " A aliquid at, consequuntur eius enim eos illum inventore libero nisi possimus,\n": ""
+  },
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " A aliquid at, consequuntur eius enim eos illum inventore libero nisi possimus,": "",
+    " A aliquid at, consequuntur eius enim eos illum inventore libero nisi possimus,\n": ""
+  },
   "throw error": "throw error",
+  "Войти": "Войти",
   "Главная": "Главная",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
