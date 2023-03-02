@@ -7,5 +7,10 @@
   "Обновить страницу": "Refresh the page",
   "throw error": "throw error",
   "Переключить": "Toggle",
-  "Короткий язык": "En"
+  "Короткий язык": "En",
+  "Войти": "Login",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password"
 }
