@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
@@ -42,7 +42,7 @@ export const Navbar = ({ classname }: NavbarProp) => {
         return (
             <div className={classNames(cls.Navbar, {}, [classname])}>
                 <Button
-                    theme={ThemeButton.CLEAR_INVERTED}
+                    theme={ButtonTheme.CLEAR_INVERTED}
                     onClick={onLogOut}
                     className={cls.links}
                 >
@@ -55,16 +55,18 @@ export const Navbar = ({ classname }: NavbarProp) => {
     return (
         <div className={classNames(cls.Navbar, {}, [classname])}>
             <Button
-                theme={ThemeButton.CLEAR_INVERTED}
+                theme={ButtonTheme.CLEAR_INVERTED}
                 onClick={onShowModal}
                 className={cls.links}
             >
                 {t('Войти')}
             </Button>
-            <LoginModal
-                isOpen={isAuthModal}
-                onClose={onCloseModal}
-            />
+            {isAuthModal && (
+                <LoginModal
+                    isOpen={isAuthModal}
+                    onClose={onCloseModal}
+                />
+            )}
         </div>
     );
 };
