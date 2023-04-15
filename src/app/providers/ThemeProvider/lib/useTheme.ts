@@ -13,7 +13,23 @@ export const useTheme = ():UseThemeResult => {
 
     // ф-я для переключения темы
     const toggleTheme = () => {
-        const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+        let newTheme: Theme;
+
+        switch (theme) {
+        case Theme.DARK:
+            newTheme = Theme.LIGHT;
+            break;
+        case Theme.LIGHT:
+            newTheme = Theme.BROWN;
+            break;
+        case Theme.BROWN:
+            newTheme = Theme.DARK;
+            break;
+
+        default:
+            newTheme = Theme.LIGHT;
+        }
+
         setTheme?.(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
