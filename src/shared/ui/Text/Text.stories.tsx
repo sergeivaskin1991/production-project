@@ -20,13 +20,13 @@ Primary.args = {
     text: 'Descripton asdasdasd',
 };
 
-export const onlyTitle = Template.bind({});
-onlyTitle.args = {
+export const OnlyTitle = Template.bind({});
+OnlyTitle.args = {
     title: 'Text loren ipsun',
 };
 
-export const onlyText = Template.bind({});
-onlyText.args = {
+export const OnlyText = Template.bind({});
+OnlyText.args = {
     text: 'Descripton asdasdasd',
 };
 
@@ -37,17 +37,17 @@ PrimaryDark.args = {
 };
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const onlyTitleDark = Template.bind({});
-onlyTitleDark.args = {
+export const OnlyTitleDark = Template.bind({});
+OnlyTitleDark.args = {
     title: 'Text loren ipsun',
 };
-onlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
+OnlyTitleDark.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const onlyTextDark = Template.bind({});
-onlyTextDark.args = {
+export const OnlyTextDark = Template.bind({});
+OnlyTextDark.args = {
     text: 'Descripton asdasdasd',
 };
-onlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
+OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Error = Template.bind({});
 Error.args = {
