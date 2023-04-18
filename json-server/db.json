@@ -107,13 +107,16 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://media.istockphoto.com/id/912299634/ru/фото/концепция-компьютерной-преступности.jpg?s=612x612&w=0&k=20&c=Gq_59L6BS45A3yUFBBNTWW7h-EmKbLmaWwM-RWG8i5A="
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://media.istockphoto.com/id/912299634/ru/фото/концепция-компьютерной-преступности.jpg?s=612x612&w=0&k=20&c=Gq_59L6BS45A3yUFBBNTWW7h-EmKbLmaWwM-RWG8i5A="
+
     }
   ],
   "profile": {
