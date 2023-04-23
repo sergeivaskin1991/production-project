@@ -22,5 +22,12 @@
   "Выйти": "Logout",
   "Укажите валюту": "Choose currency",
   "Укажите страну": "Choose country",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Статьи": "Articles",
+  "Произошла ошибка при загрузке статьи": {
+    "": "An error occurred while discovering the articles."
+  },
+  "Комментарии отсутствуют": "No comments",
+  "Введите текст комментария": "Enter comment text",
+  "Отправить": "Send"
 }
