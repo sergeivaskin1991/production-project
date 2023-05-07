@@ -18,13 +18,13 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 export const Primary = Template.bind({});
 Primary.args = {
     data: {
-        first: 'asd',
         username: 'admin',
-        age: 32,
-        country: Country.Russia,
-        lastname: 'user',
-        city: 'Moscow',
-        currency: Currency.EUR,
+        age: 22,
+        country: Country.Ukraine,
+        lastname: 'ulbi tv',
+        first: 'asd',
+        city: 'asf',
+        currency: Currency.USD,
         avatar,
     },
 };

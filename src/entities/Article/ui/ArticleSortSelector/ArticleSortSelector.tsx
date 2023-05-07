@@ -4,21 +4,19 @@ import { memo, useCallback, useMemo } from 'react';
 import { Select, SelectOption } from 'shared/ui/Select/Select';
 import { ArticleSortField } from 'entities/Article/model/types/article';
 import { SortOrder } from 'shared/types';
-import { Simulate } from 'react-dom/test-utils';
 import cls from './ArticleSortSelector.module.scss';
-import input = Simulate.input;
 
 interface ArticleSortSelectorProps {
     className?: string;
-    sort: ArticleSortField,
-    order: SortOrder,
-    onChangeOrder: (newOrder: SortOrder) => void,
-    onChangeSort: (newSort: ArticleSortField) => void,
+    sort: ArticleSortField;
+    order: SortOrder;
+    onChangeOrder: (newOrder: SortOrder) => void;
+    onChangeSort: (newSort: ArticleSortField) => void;
 }
 
 export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     const {
-        className, onChangeSort, sort, onChangeOrder, order,
+        className, onChangeOrder, onChangeSort, order, sort,
     } = props;
     const { t } = useTranslation();
 
@@ -28,7 +26,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
             content: t('возрастанию'),
         },
         {
-            value: 'вуыс',
+            value: 'desc',
             content: t('убыванию'),
         },
     ], [t]);
@@ -48,19 +46,13 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
         },
     ], [t]);
 
-    const changeSortHandler = useCallback(
-        (newSort: string) => {
-            onChangeSort(newSort as ArticleSortField);
-        },
-        [onChangeSort],
-    );
+    const changeSortHandler = useCallback((newSort: string) => {
+        onChangeSort(newSort as ArticleSortField);
+    }, [onChangeSort]);
 
-    const changeOrderHandler = useCallback(
-        (newOrder: string) => {
-            onChangeOrder(newOrder as SortOrder);
-        },
-        [onChangeOrder],
-    );
+    const changeOrderHandler = useCallback((newOrder: string) => {
+        onChangeOrder(newOrder as SortOrder);
+    }, [onChangeOrder]);
 
     return (
         <div className={classNames(cls.ArticleSortSelector, {}, [className])}>

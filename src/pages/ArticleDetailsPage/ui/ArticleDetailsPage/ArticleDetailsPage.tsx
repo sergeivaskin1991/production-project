@@ -12,11 +12,13 @@ import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Page } from 'widgets/Page/Page';
-import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
-import { addCommentForArticle } from '../../model/services/addCommentForArticle';
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
-import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slice/articleDetailsCommentsSlice';
+import { addCommentForArticle } from '../../model/services/addCommentForArticle/addCommentForArticle';
+import {
+    fetchCommentsByArticleId,
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import cls from './ArticleDetailsPage.module.scss';
+import { articleDetailsCommentsReducer, getArticleComments } from '../../model/slices/articleDetailsCommentsSlice';
+import { getArticleCommentsIsLoading } from '../../model/selectors/comments';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -35,16 +37,13 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
     const navigate = useNavigate();
 
+    const onBackToList = useCallback(() => {
+        navigate(RoutePath.articles);
+    }, [navigate]);
+
     const onSendComment = useCallback((text: string) => {
         dispatch(addCommentForArticle(text));
     }, [dispatch]);
-
-    const onBackToList = useCallback(
-        () => {
-            navigate(RoutePath.articles);
-        },
-        [navigate],
-    );
 
     useInitialEffect(() => {
         dispatch(fetchCommentsByArticleId(id));
@@ -61,11 +60,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    onClick={onBackToList}
-                >
-                    {t('Нахад к списку')}
+                <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
+                    {t('Назад к списку')}
                 </Button>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />

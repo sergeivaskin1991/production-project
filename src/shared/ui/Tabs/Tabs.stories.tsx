@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { action } from '@storybook/addon-actions';
 import { Tabs } from './Tabs';
@@ -14,8 +14,8 @@ export default {
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Normal = Template.bind({});
+Normal.args = {
     tabs: [
         {
             value: 'tab 1',

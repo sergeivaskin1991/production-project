@@ -5,7 +5,7 @@ import cls from './Tabs.module.scss';
 
 export interface TabItem {
     value: string;
-    content: ReactNode
+    content: ReactNode;
 }
 
 interface TabsProps {
@@ -17,8 +17,7 @@ interface TabsProps {
 
 export const Tabs = memo((props: TabsProps) => {
     const {
-        className, tabs,
-        onTabClick, value,
+        className, tabs, onTabClick, value,
     } = props;
 
     const clickHandle = useCallback((tab: TabItem) => () => {
@@ -29,7 +28,7 @@ export const Tabs = memo((props: TabsProps) => {
         <div className={classNames(cls.Tabs, {}, [className])}>
             {tabs.map((tab) => (
                 <Card
-                    theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINE}
+                    theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED}
                     className={cls.tab}
                     key={tab.value}
                     onClick={clickHandle(tab)}

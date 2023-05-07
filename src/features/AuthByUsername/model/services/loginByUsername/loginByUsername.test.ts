@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUsername } from './loginByUsername';
@@ -38,6 +37,7 @@ describe('loginByUsername.test', () => {
 
     test('success login', async () => {
         const userValue = { username: '123', id: '1' };
+
         const thunk = new TestAsyncThunk(loginByUsername);
         thunk.api.post.mockReturnValue(Promise.resolve({ data: userValue }));
         const result = await thunk.callThunk({ username: '123', password: '123' });

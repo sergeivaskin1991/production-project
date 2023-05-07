@@ -1,11 +1,12 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileValidateErrors, ValidateProfileError } from 'entities/Profile';
+import { ValidateProfileError } from 'entities/Profile';
+import { getProfileValidateErrors } from './getProfileValidateErrors';
 
-describe('getProfileValidateError.test', () => {
-    test('should return error', () => {
+describe('getProfileValidateErrors.test', () => {
+    test('should work with filled state', () => {
         const state: DeepPartial<StateSchema> = {
             profile: {
-                validateError: [
+                validateErrors: [
                     ValidateProfileError.SERVER_ERROR,
                     ValidateProfileError.INCORRECT_AGE,
                 ],
