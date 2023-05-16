@@ -16,7 +16,7 @@ export const Primary = Template.bind({});
 Primary.args = {
     label: 'Укажите значение',
     options: [
-        { value: '1', content: 'Первый пункт' },
-        { value: '2', content: 'Второй пункт' },
+        { value: '123', content: 'Первый пункт' },
+        { value: '1234', content: 'Второй пункт' },
     ],
 };

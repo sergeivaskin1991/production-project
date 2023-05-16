@@ -7,13 +7,11 @@ import { Sidebar } from 'widgets/Sidebar';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserInited, userActions } from 'entities/User';
 
-const App = () => {
-    // достаем из хука нужные данные для переключения темы
+function App() {
     const { theme } = useTheme();
     const dispatch = useDispatch();
     const inited = useSelector(getUserInited);
 
-    // вызываем initAuthData
     useEffect(() => {
         dispatch(userActions.initAuthData());
     }, [dispatch]);
@@ -29,6 +27,6 @@ const App = () => {
             </Suspense>
         </div>
     );
-};
+}
 
 export default App;

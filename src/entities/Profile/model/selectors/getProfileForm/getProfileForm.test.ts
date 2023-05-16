@@ -1,7 +1,7 @@
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getProfileForm } from 'entities/Profile/model/selectors/getProfileForm/getProfileForm';
-import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
+import { getProfileForm } from './getProfileForm';
 
 describe('getProfileForm.test', () => {
     test('should return error', () => {
@@ -14,7 +14,6 @@ describe('getProfileForm.test', () => {
             city: 'asf',
             currency: Currency.USD,
         };
-
         const state: DeepPartial<StateSchema> = {
             profile: {
                 form: data,

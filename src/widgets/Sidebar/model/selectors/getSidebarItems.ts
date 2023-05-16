@@ -39,6 +39,7 @@ export const getSidebarItems = createSelector(
                 },
             );
         }
+
         return sidebarItemsList;
     },
 );

@@ -29,5 +29,21 @@
   },
   "Комментарии отсутствуют": "No comments",
   "Введите текст комментария": "Enter comment text",
-  "Отправить": "Send"
+  "Отправить": "Send",
+  "Поиск": "Search",
+  "возрастанию": "ascending",
+  "по": "in",
+  "убыванию": "descending",
+  "Айти": "IT",
+  "Экономика": "Economics",
+  "Все статьи": "All articles",
+  "Наука": "Science",
+  "Сортировать ПО": "Sort BY",
+  "дате создания": "created date",
+  "названию": "name",
+  "просмотрам": "views",
+  "Создание новой статьи": "Create a new article",
+  "Редактирование статьи с ID = ": "Editing an article with ID = ",
+  "My App": "My App",
+  "Создать статью": "Create article"
 }
