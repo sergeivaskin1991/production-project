@@ -47,7 +47,7 @@ export const Text = memo((props: TextProps) => {
         size = TextSize.M,
     } = props;
 
-    const HeaderTeg = mapSizeToHeaderTag[size];
+    const HeaderTag = mapSizeToHeaderTag[size];
 
     const mods: Mods = {
         [cls[theme]]: true,
@@ -57,8 +57,8 @@ export const Text = memo((props: TextProps) => {
 
     return (
         <div className={classNames(cls.Text, mods, [className])}>
-            {title && <HeaderTeg className={cls.title}>{title}</HeaderTeg>}
-            {text && <HeaderTeg className={cls.text}>{text}</HeaderTeg>}
+            {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
+            {text && <p className={cls.text}>{text}</p>}
         </div>
     );
 });
