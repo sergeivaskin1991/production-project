@@ -26,7 +26,7 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
 
 interface ArticleDetailsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 const reducers: ReducersList = {
@@ -116,6 +116,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     />
                     <HStack gap="8" className={cls.articleInfo}>
                         <Icon className={cls.icon} Svg={EyeIcon} />
+                        <svg />
                         <Text text={String(article?.views)} />
                     </HStack>
                     <HStack gap="8" className={cls.articleInfo}>

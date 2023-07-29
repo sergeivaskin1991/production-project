@@ -1,19 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-
 import { Page } from 'widgets/Page/Page';
 
-import cls from './AdminPanelPage.module.scss';
-
-interface AdminPanelPageProp {
-    className?: string;
-}
-
-const AdminPanelPage = ({ className }: AdminPanelPageProp) => {
-    const { t } = useTranslation();
+const AdminPanelPage = () => {
+    const { t } = useTranslation('about');
 
     return (
-        <Page className={classNames(cls.AdminPanelPage, {}, [className])}>
+        <Page>
             {t('Админ панель')}
         </Page>
     );
