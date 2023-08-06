@@ -1,6 +1,4 @@
-import React, {
-    ReactNode,
-} from 'react';
+import React, { ReactNode } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { useTheme } from '@/app/providers/ThemeProvider';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
@@ -28,10 +26,14 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const {
-        isClosing,
         close,
+        isClosing,
         isMounted,
-    } = useModal({ animationDelay: ANIMATION_DELAY, isOpen, onClose });
+    } = useModal({
+        animationDelay: ANIMATION_DELAY,
+        onClose,
+        isOpen,
+    });
 
     const { theme } = useTheme();
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { RatingCard } from './RatingCard';
 
@@ -13,5 +13,5 @@ export default {
 
 const Template: ComponentStory<typeof RatingCard> = (args) => <RatingCard {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Normal = Template.bind({});
+Normal.args = {};
