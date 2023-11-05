@@ -14,7 +14,6 @@ function isAbsolute(value: string) {
 
 files.forEach((sourceFile) => {
     const importDeclarations = sourceFile.getImportDeclarations();
-
     importDeclarations.forEach((importDeclaration) => {
         const value = importDeclaration.getModuleSpecifierValue();
 
