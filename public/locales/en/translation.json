@@ -2,7 +2,7 @@
   "Тестовый пример": "Test example",
   "Перевод": "Translate",
   "Главная страница": "Main page",
-  "Язык": "Русский",
+  "Язык": "English",
   "новый перевод": "новый перевод",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
@@ -10,8 +10,8 @@
   "throw error": "throw error",
   "Главная": "Main",
   "О сайте": "About us",
-  "Переключить": "Переключить",
-  "Короткий язык": "Ru",
+  "Переключить": "Toggle",
+  "Короткий язык": "En",
   "Войти": "Login",
   "increment": "increment",
   "decrement": "decrement",
@@ -23,12 +23,13 @@
   "Укажите валюту": "Choose currency",
   "Укажите страну": "Choose country",
   "Профиль": "Profile",
+  "Статья не найдена": "Article not found",
   "Статьи": "Articles",
   "Произошла ошибка при загрузке статьи": {
-    "": "An error occurred while discovering the articles."
+    "": "Произошла ошибка при загрузке статьи."
   },
-  "Комментарии отсутствуют": "No comments",
-  "Введите текст комментария": "Enter comment text",
+  "Комментарии отсутствуют": "There are no comments",
+  "Введите текст комментария": "Enter the comment text",
   "Отправить": "Send",
   "Поиск": "Search",
   "возрастанию": "ascending",
@@ -42,12 +43,10 @@
   "дате создания": "created date",
   "названию": "name",
   "просмотрам": "views",
-  "Создание новой статьи": "Create a new article",
-  "Редактирование статьи с ID = ": "Editing an article with ID = ",
-  "Мое приложение": "My App",
+  "Создание новой статьи": "Create new article",
+  "Редактирование статьи с ID = ": "Edit article with ID = ",
+  "Ulbi TV App": "Ulbi TV App",
   "Создать статью": "Create article",
   "Профиль пользователя": "Профиль пользователя",
-  "Ваш отзыв": "Ваш отзыв",
   "Закрыть": "Закрыть"
 }
-
